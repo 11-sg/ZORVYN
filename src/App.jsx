@@ -333,7 +333,7 @@ function ThemeToggle() {
         </div>
       </div>
       <span style={{ fontSize: 11, fontWeight: 600, color: isDark ? "#94a3b8" : "#64748b", letterSpacing: "0.02em", whiteSpace: "nowrap" }}>
-        {isDark ? "Deep Space" : "Light"}
+        {isDark ? "Dark" : "Light"}
       </span>
     </button>
   );
@@ -659,7 +659,7 @@ function VibeToggle() {
   const isAdmin = state.currentRole === "Admin";
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "5px 12px 5px 8px", borderRadius: 24, border: "1px solid var(--border-strong)", background: "var(--bg-surface)" }}>
-      <div style={{ fontSize: 9.5, fontWeight: 700, color: "var(--text-muted)", letterSpacing: ".08em", textTransform: "uppercase" }}>Vibe</div>
+      <div style={{ fontSize: 9.5, fontWeight: 700, color: "var(--text-muted)", letterSpacing: ".08em", textTransform: "uppercase" }}></div>
       <button onClick={() => dispatch({ type: "SET_ROLE", payload: isAdmin ? "Viewer" : "Admin" })} style={{ width: 44, height: 24, borderRadius: 12, position: "relative", background: isAdmin ? "linear-gradient(135deg,#6366f1,#818cf8)" : (isDark ? "#1e293b" : "#e5e7eb"), border: "none", cursor: "pointer", transition: "background .3s", boxShadow: isAdmin ? "0 2px 8px rgba(99,102,241,.4)" : "none", flexShrink: 0 }} aria-label="Toggle role">
         <div style={{ position: "absolute", top: 3, left: isAdmin ? 22 : 3, width: 18, height: 18, borderRadius: "50%", background: "#fff", transition: "left .25s cubic-bezier(.4,0,.2,1)", boxShadow: "0 1px 4px rgba(0,0,0,.18)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, lineHeight: 1 }}>{isAdmin ? "🔑" : "👁"}</div>
       </button>
